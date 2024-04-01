@@ -6,14 +6,15 @@ h1 {
   font-size: 18pt;
   font-family: Arvo;
   text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(to right, #4C2882, #78288C);
+  background: linear-gradient(to right, #4C2882, #A03CCB);
   border-radius: 10px;
   padding: 10px;
-  color: white;
   width: 65%;
   text-align: center;
   margin: 0 auto;
   color: #ADD8E6;
+  border: 2px solid #CB9BDE;
+  box-shadow: 5px 5px 5px #B79A00;
 }
 
 .galeria {
@@ -26,7 +27,6 @@ h1 {
   margin: 10px;
   width: 150px;
   height: 150px;
-  margin-top: 50px;
 }
 
 .imagen {
@@ -55,4 +55,11 @@ h1 {
 .imagen:hover {
   transform: scale(1.1);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.separator {
+  width: 80%;
+  margin: 40px auto 20px;
+  border-bottom: 1px dashed #666666;
+  color: #666666;
 }
