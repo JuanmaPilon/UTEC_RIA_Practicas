@@ -10,15 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const description = document.getElementById('description').value;
         const category = document.getElementById('category').value;
 
+        
        // checkeo
-        if (!title || !price || !description || !category) {
-            showAlert('All fields are required', 'danger');
-            return;
+       if (!title || !price || !description || !category) {
+        showAlert('All fields are required', 'danger');
+        return;
+    }
+    console.log('Title:', title);
+    console.log('Price:', price);
+    console.log('Description:', description);
+    console.log('Category:', category);
+
+
+        // me creo el productito pal local
+        const producto = {
+            title,
+            price,
+            description,
+            category,
         }
-        console.log('Title:', title);
-        console.log('Price:', price);
-        console.log('Description:', description);
-        console.log('Category:', category);
         // reseteo
         form.reset();
     });

@@ -1,0 +1,12 @@
+.title-border {
+    border: 2px solid lightblue;
+    padding: 10px;
+    background-color: #CFE2FF;
+    border-radius: 10px;
+    padding: 5px;"
+}
+
+.title-title {
+    color: darkblue; 
+    padding: 10px;
+}
