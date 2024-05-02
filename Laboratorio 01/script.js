@@ -36,10 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // guardar el producto en el localStorage
         localStorage.setItem(`producto-${id}`, JSON.stringify(producto));
-
-        // mostrar la alerta de exito
         showAlertSuccess(`Producto agregado con éxito. ID: ${id}`);
-
         // resetear el formulario
         form.reset();
     });
@@ -62,15 +59,13 @@ document.addEventListener('DOMContentLoaded', function () {
         alertDiv.textContent = message;
         document.body.appendChild(alertDiv);
 
-        // Desvanecer la alerta despues de 3 segundos
+        // fade 3 segs
         setTimeout(function () {
             alertDiv.remove();
         }, 3000);
     }
-
-    // funcion para mostrar una alerta de exito
     async function showAlertSuccess(message) {
-        // Limpiar la alerta si ya existe
+        // si ya existe limpia la alert
         const existingAlert = document.querySelector('.alert-success');
         if (existingAlert) {
             existingAlert.remove();
@@ -88,13 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
         closeButton.addEventListener('click', function() {
             alertDiv.remove();
         });
-
-        // mostrar el mensaje de exito
         alertDiv.textContent = message;
-
-        // agregar el boton de cierre
         alertDiv.appendChild(closeButton);
-
         // agregar la alerta al contenedor
         document.getElementById('alerts').appendChild(alertDiv);
     }
