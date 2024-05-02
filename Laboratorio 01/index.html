@@ -22,29 +22,41 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                New Product
+                                <p>New Product</p>
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionClass">
                             <div class="accordion-body">
+                                    <h2 class="text-center">New Product</h2>
                                 <form id="newProductForm">
-                                    <div class="mb-3">
-                                        <label for="title" class="form-label">Title</label>
-                                        <input type="text" class="form-control" id="title" name="title">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="price" class="form-label">Price</label>
-                                        <input type="text" class="form-control" id="price" name="price">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="description" class="form-label">Description</label>
-                                        <textarea class="form-control" id="description" name="description"></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="category" class="form-label">Category</label>
-                                        <input type="text" class="form-control" id="category" name="category">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Send</button>
+                                    <div class="mb-3 form-group row justify-content-center">
+                                        <label for="title" class="form-label col-sm-2">Title</label>
+                                        <div class="col-sm-7">
+                                          <input type="text" class="form-control" id="title" name="title">
+                                        </div>
+                                      </div>
+                                      <div class="mb-3 form-group row justify-content-center">
+                                        <label for="price" class="form-label col-sm-2">Price</label>
+                                        <div class="col-sm-7">
+                                          <input type="number" class="form-control" id="price">
+                                        </div>
+                                      </div>
+                                      <div class="mb-3 form-group row justify-content-center">
+                                        <label for="description" class="form-label col-sm-2">Description</label>
+                                        <div class="col-sm-7">
+                                          <textarea class="form-control" id="description" ></textarea>
+                                        </div>
+                                      </div>
+                                      <div class="mb-3 form-group row justify-content-center">
+                                        <label for="category" class="form-label col-sm-2">Category</label>
+                                        <div class="col-sm-7">
+                                          <input type="text" class="form-control" id="category" >  
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-10 text-end custom-margin-right d-flex ">
+                                        <button type="submit" class="btn btn-primary">Send</button>
+                                    </div>   
+                                    <div id="alerts"></div>                        
                                 </form>
                             </div>
                         </div>
@@ -57,7 +69,10 @@
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionClass">
                             <div class="accordion-body">
-                                
+                                <div class="text-center">
+                                    <h2>Product List</h2>
+                                    <div id="productList"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
