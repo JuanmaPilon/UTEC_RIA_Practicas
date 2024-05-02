@@ -28,6 +28,19 @@ document.addEventListener('DOMContentLoaded', function () {
             price,
             description,
             category,
+        };
+        
+        localStorage.setItem('producto', JSON.stringify(producto));
+        // primero guardo en local storage y luego de eso intento hacer la peticion a la api
+        try {
+            const response = await fetch('https://fakestoreapi.com/products', {
+                method: 'POST',
+            });
+            const data = await response.json();
+            console.log('Producto creado:', data);
+        } catch (error) {
+            showAlert('Error al crear el producto', 'danger');
+            console.error('Error:', error);
         }
         // reseteo
         form.reset();
@@ -45,4 +58,21 @@ document.addEventListener('DOMContentLoaded', function () {
             alertDiv.remove();
         }, 3000);
     }
+
+
+     async function displayProducts() {
+        try {
+            const response = await fetch('https://fakestoreapi.com/products');
+            const products = await response.json();
+
+           
+            products.forEach(product => {
+                
+                console.log('Product:', product);
+            });
+        } catch (error) {
+            console.error('Error fetching products:', error);
+        }
+    }
+    displayProducts();
 });
