@@ -1,2 +1,2 @@
 # RIA___Practices
-Bunch of deliverable practical work on the subject of Rich Internet Applications (RIA).
+Varias practicas hechas en el taller de RIA. Se utilizo HTML, CSS, Javascript, Typescript y Angular para trabajar en las tareas.
